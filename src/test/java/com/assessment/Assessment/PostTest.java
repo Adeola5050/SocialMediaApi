@@ -11,8 +11,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 @Slf4j
@@ -41,6 +43,12 @@ public class PostTest {
 
     @Test
     void testThatUpdatePost(){
+        Post updatedPost= new Post();
+        updatedPost.setContent("Comedy");
+        updatedPost.setLikesCount(3);
+        updatedPost.setModifiedDate(LocalDateTime.now());
+        updatedPost.setDeleted(true);
+        assertThat(updatedPost).isNotNull();
 
     }
 
@@ -49,6 +57,16 @@ public class PostTest {
         List<Post> postList= (List<Post>) postRepository.findAll();
         assertThat(postList.size()).isNotNull();
         log.info("{}-->", postList);
+
+    }
+
+    @Test
+    void testThatFindPostById(){
+        Long postId= 4L;
+        Optional<Post> post= postRepository.findById(postId);
+        assertThat(post).isNotNull();
+
+
     }
 
 

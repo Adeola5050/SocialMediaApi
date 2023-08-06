@@ -14,9 +14,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
@@ -60,6 +60,10 @@ public class CommentTest {
 
     @Test
     void testThatUpdateComment() {
+        Comment updatedComment= new Comment();
+        updatedComment.setModifiedDate(LocalDateTime.now());
+        updatedComment.setContent("");
+        assertThat(updatedComment).isNotNull();
 
     }
 
@@ -75,5 +79,23 @@ public class CommentTest {
         assertThat(comments.size());
         assertTrue(comments.contains(comment1));
         assertTrue(comments.contains(comment2));
+    }
+
+    @Test
+    void testThatAddComment(){
+
+    }
+    @Test
+    void testThatFindById(){
+        Long commentId=8L;
+        Optional<Comment> comment=commentRepository.findById(commentId);
+        assertThat(comment).isNotNull();
+
+    }
+    @Test
+    void testThatDeleteById(){
+        Long commentId=9L;
+        commentRepository.deleteById(commentId);
+        assertThat(commentId).isNotNull();
     }
 }

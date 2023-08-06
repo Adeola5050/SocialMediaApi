@@ -83,7 +83,6 @@ public class UserServiceImpl implements UserService {
             throw new SocialMediaAppException("User with this id" + userId + " doesn't exist");
         }
 
-
     }
 
     private ResponseDetails createUserResponse() throws SocialMediaAppException {

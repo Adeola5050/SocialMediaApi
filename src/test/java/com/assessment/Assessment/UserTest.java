@@ -97,22 +97,13 @@ public class UserTest {
     }
 
     @Test
-    void testThatDeleteUser() {
-//        User
-
-
-    }
-
-    @Test
     void testThatGetUserById(){
         Long userId= 1L;
         Optional<User> user= userRepository.findById(userId);
         User expectedUser= new User();
         expectedUser.setId(userId);
         expectedUser.setUsername("Ben");
-
         assertThat(user).isNotNull();
-
 
     }
 
