@@ -2,7 +2,7 @@
 # Coding_Assessment
 =======
 # Coding_Assessment
-This project demonstratestheimplemetation of socia media API. Thisincludes tbhe following features:
+This project demonstrates the implementation of social media API. This includes the following features:
 
 ## Features
 Create user , login, read, update and delete User
