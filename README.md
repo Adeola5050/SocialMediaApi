@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-# Coding_Assessment
-=======
-# Coding_Assessment
+
+# Social Media Api
 This project demonstrates the implementation of social media API. This includes the following features:
 
 ## Features
@@ -22,7 +20,7 @@ PostMan(For API documentation)
 To get started withis project , you will need to have the following installed on your local machine:
 ** JDK 17
 
-Clone the repository https://github.com/Adeola5050/Coding_Assessment.git
+Clone the repository https://github.com/Adeola5050/SocialMediaApi.git
 Navigate to the project directory cd SocialMedia
 Install the required dependencies
 Add database "socialmedia" MySQL
@@ -30,4 +28,4 @@ Build the project: mvn clean install
 Run the project
 
 -> The application will be available at http://localhost:9070.
->>>>>>> 525df4b (Create README.md)
+(Create README.md)
